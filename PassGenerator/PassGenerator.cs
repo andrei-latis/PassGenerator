@@ -33,8 +33,48 @@ namespace PassGenerator
                 SymbolsChecked = false;
             }
 
+            txbPassword.Text = PasswordGenerator(PasswordLength, SymbolsChecked);
+        }
 
+        public string PasswordGenerator(int PasswordLength, bool SymbolsChecked)
+        {
+            Random num = new Random();
+            string[] symbols = new string[] { "!", "#", "$", "%", "&", ".", "?", "@", "_" };
+            string password = "";
+            int type = 0;
 
+            while (password.Length < PasswordLength)
+            {
+                type = num.Next(0, 4);
+
+                if (type == 0)
+                {
+                    password += Convert.ToChar(num.Next(65, 91));
+                }
+                else
+                {
+                    if (type == 1)
+                    {
+                        password += Convert.ToChar(num.Next(97, 123));
+                    }
+                    else
+                    {
+                        if (type == 2)
+                        {
+                            password += Convert.ToChar(num.Next(48, 58));
+                        }
+                        else
+                        {
+                            if (type == 3 && SymbolsChecked == true)
+                            {
+                                password += symbols[num.Next(0, 9)];
+                            }
+                        }
+                    }
+                }            
+            }
+
+            return password;
         }
     }
 }

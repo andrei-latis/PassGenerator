@@ -42,10 +42,10 @@
             this.lblUppercaseCharacters = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblPasswordLength = new System.Windows.Forms.Label();
+            this.txbPassword = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblPasswordLength = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -218,15 +218,25 @@
             this.panel2.Size = new System.Drawing.Size(190, 129);
             this.panel2.TabIndex = 14;
             // 
-            // textBox1
+            // lblPasswordLength
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(311, 103);
-            this.textBox1.TabIndex = 15;
+            this.lblPasswordLength.AutoSize = true;
+            this.lblPasswordLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordLength.Location = new System.Drawing.Point(22, 33);
+            this.lblPasswordLength.Name = "lblPasswordLength";
+            this.lblPasswordLength.Size = new System.Drawing.Size(136, 20);
+            this.lblPasswordLength.TabIndex = 18;
+            this.lblPasswordLength.Text = "Password Length:";
+            // 
+            // txbPassword
+            // 
+            this.txbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPassword.Location = new System.Drawing.Point(3, 4);
+            this.txbPassword.Multiline = true;
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.ReadOnly = true;
+            this.txbPassword.Size = new System.Drawing.Size(311, 103);
+            this.txbPassword.TabIndex = 15;
             // 
             // panel3
             // 
@@ -243,21 +253,11 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.txbPassword);
             this.panel4.Location = new System.Drawing.Point(12, 147);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(319, 112);
             this.panel4.TabIndex = 17;
-            // 
-            // lblPasswordLength
-            // 
-            this.lblPasswordLength.AutoSize = true;
-            this.lblPasswordLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordLength.Location = new System.Drawing.Point(22, 33);
-            this.lblPasswordLength.Name = "lblPasswordLength";
-            this.lblPasswordLength.Size = new System.Drawing.Size(136, 20);
-            this.lblPasswordLength.TabIndex = 18;
-            this.lblPasswordLength.Text = "Password Length:";
             // 
             // PassGenerator
             // 
@@ -299,7 +299,7 @@
         private System.Windows.Forms.Label lblUppercaseCharacters;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbPassword;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblPasswordLength;
